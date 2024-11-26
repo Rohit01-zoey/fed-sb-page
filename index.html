@@ -172,8 +172,7 @@
     <figure class = "image">
     <img src="static/images/LoRA-SB-intro.png" alt="LoRA-SB Illustration">
       <figcaption class="has-text-justified mt-4">
-        LoRA-XS reduces parameter count compared to LoRA by inserting a trainable <em>r × r</em> matrix <em>R</em> between <em>B</em> and <em>A</em>, while keeping other matrices fixed, leading to <em>W = W₀ + sBRA</em>. Our method, LoRA-SB, leverages the same architecture. We find that updating <em>R</em> using its gradients <em>g^R</em> is equivalent to updating the full-finetuning matrix <em>W</em> with an equivalent gradient <em>g̃ₛв = sBg^RA</em>. We initialize <em>B</em>, <em>R</em>, and <em>A</em> such that the equivalent gradient <em>g̃ₛв</em> optimally approximates the full fine-tuning gradient <em>g</em> in low rank subspaces <strong>at each training step</strong>.
-        In essence, we simulate the <strong>entire full fine-tuning process</strong> optimally within low-rank subspaces by <strong>utilizing only the initial gradient <em>g₁</em></strong> (shown in green) from full fine-tuning.
+        LoRA-XS reduces parameter count compared to LoRA by inserting a trainable <em>r × r</em> matrix <em>R</em> between <em>B</em> and <em>A</em>, while keeping other matrices fixed, leading to <em>W = W<sub>0</sub> + sBRA</em>.Our method, LoRA-SB, leverages the same architecture. We find that updating <em>R</em> using its gradients <em>g<sup>R</sup></em> is equivalent to updating the full-finetuning matrix <em>W</em> with an equivalent gradient <em>g<sub>SB</sub> = sBg<sup>R</sup>A</em>. We initialize <em>B</em>, <em>R</em>, and <em>A</em> such that the equivalent gradient <em>g<sub>SB</sub></em> optimally approximates the full fine-tuning gradient <em>g</em> in low rank subspaces <strong>at each training step</strong>. In essence, we simulate the <strong>entire full fine-tuning process</strong> optimally within low-rank subspaces by <strong>utilizing only the initial gradient <em>g<sub>1</sub></em></strong> (shown in green) from full fine-tuning.
       </figcaption>
     </figure>
   </div>
@@ -218,9 +217,9 @@
       <!-- Carousel item 1 -->
       <div class="item">
         <div class="carousel-content">
-          <img src="static/images/m3col-tab-1.jpg" alt="RoBERTa-base on GLUE">
+          <img src="static/images/sb-math.png" alt="Mistral-7B and Gemma-2 9B on Arithmetic Reasoning">
           <h2 class="subtitle has-text-centered main-caption">
-            N24News
+            Arithmetic Reasoning: Mistral-7B and Gemma-2 9B
           </h2>
         </div>
       </div>
@@ -228,9 +227,9 @@
       <!-- Carousel item 2 -->
       <div class="item">
         <div class="carousel-content">
-          <img src="static/images/m3col-tab-2.jpg" alt="RoBERTa-large on GLUE">
+          <img src="static/images/sb-cr.png" alt="RoBERTa-large on GLUE">
           <h2 class="subtitle has-text-centered main-caption">
-            ROSMAP and BRCA
+            Commonsense Reasoning: Llama-3.2 3B
           </h2>
         </div>
       </div>
@@ -238,9 +237,9 @@
       <!-- Carousel item 3 -->
       <div class="item">
         <div class="carousel-content">
-          <img src="static/images/m3col-tab-3.jpg" alt="GPT-2 on E2E-NLG">
+          <img src="static/images/sb-glue.png" alt="GPT-2 on E2E-NLG">
           <h2 class="subtitle has-text-centered main-caption">
-            Food-101
+            GLUE: RoBERTa-large
           </h2>
         </div>
       </div>
@@ -249,41 +248,41 @@
     <!-- Caption description below -->
     <div class="content has-text-justified mt-4">
       <p>
-        Comparison of M3CoL against various baselines on N24News, ROSMAP, BRCA, and Food-101 datasets.
+        Performance Comparison on Various Tasks
       </p>
     </div>
   </div>
 </section>
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Visualization of Attention Heatmaps</h2>
+    <h2 class="title is-3 has-text-centered">Visualization of Attention Heatmaps</h2> -->
 
     <!-- Carousel wrapper -->
-    <div id="fedex-lora-carousel" class="carousel results-carousel">
+    <!-- <div id="fedex-lora-carousel" class="carousel results-carousel"> -->
       <!-- Carousel item 1 -->
-      <div class="item" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <!-- <div class="item" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
         <img src="static/images/m3col-att-1.jpg" alt="RoBERTa-base on GLUE" style="width: 100%; max-width: 600px; height: auto; margin-bottom: 10px;">
         <h2 class="subtitle has-text-centered main-caption", style="text-align: left;">
         </h2>
-      </div>
+      </div> -->
 
       <!-- Carousel item 2 -->
-      <div class="item" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <!-- <div class="item" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
         <img src="static/images/m3col-att-2.jpg" alt="RoBERTa-large on GLUE" style="width: 100%; max-width: 600px; height: auto; margin-bottom: 10px;">
         <h2 class="subtitle has-text-centered main-caption" style="text-align: left;">
         </h2>
       </div>
-      </div>
+      </div> -->
 
     <!-- Caption description below -->
-    <div class="content has-text-justified mt-4">
+    <!-- <div class="content has-text-justified mt-4">
       <p>
       Text-guided visual grounding with varying input prompts.
       </p>
     </div>
   </div>
-</section>
+</section> -->
 
 
 
@@ -367,15 +366,9 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{kumar2024harnessingsharedrelationsmultimodal,
-        title={Harnessing Shared Relations via Multimodal Mixup Contrastive Learning for Multimodal Classification}, 
-        author={Raja Kumar and Raghav Singhal and Pranamya Kulkarni and Deval Mehta and Kshitij Jadhav},
-        year={2024},
-        eprint={2409.17777},
-        archivePrefix={arXiv},
-        primaryClass={cs.CV},
-        url={https://arxiv.org/abs/2409.17777}, 
-  }</code></pre>
+      <pre><code>
+        
+      </code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
