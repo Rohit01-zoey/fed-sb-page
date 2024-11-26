@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>M3CoL: Harnessing Shared Relations via Multimodal Mixup Contrastive Learning for Multimodal Classification</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">M3CoL: Harnessing Shared Relations via Multimodal Mixup Contrastive Learning for Multimodal Classification</h1>
+            <div class="is-size-4 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <span target="_blank">Raja Kumar<sup>*</sup><sup>1</sup>,</span>
+                <span class="author-block">
+                <span  target="_blank">Raghav Singhal<sup>*</sup><sup>1</sup>,</span>
+                <span class="author-block">
+                <span target="_blank">Pranamya Kulkarni<sup>1</sup>,</span>
+                <span class="author-block">
+                <span target="_blank">Deval Mehta<sup>2</sup>,</span>
+                <span class="author-block">      
+                <span target="_blank">Kshitij Jadhav<sup>1</sup>,</span>
+                <span class="author-block">
+                </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1 </sup>Indian Institute of Technology Bombay, India
+                    <br><sup>2 </sup>AIM for Health Lab, Department of Data Science & AI, Monash University, Australia</span>
+                    <span class="eql-cntrb"><small><br><sup>* </sup>Indicates Equal Contribution</small></span>
+                  </div>
+
+                  <div class="is-size-4 publication-authors">
+                    <span class="author-block" style="color: red;">A version of our paper is accepted at NeurIPS 2024 Workshop on Unifying Representations in Neural Models (UniReps)</span>
+                    </span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         
+                      <!-- Arxiv PDF link -->
+                      <!-- <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/RaghavSinghal10/M3CoL" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2409.17777" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+         Your video here -->
+<!--         <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2>
+    </div>
+  </div>
+</section> -->
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Deep multimodal learning has shown remarkable success by leveraging contrastive learning 
+            to capture explicit one-to-one relations across modalities. However, realworld data often 
+            exhibits <em>shared</em> relations beyond simple pairwise associations. We propose <strong>M3CoL</strong>, a 
+            <strong>M</strong>ultimodal <strong>M</strong>ixup <strong>C</strong>ontrastive <strong>L</strong>earning approach to capture nuanced shared relations 
+            inherent in multimodal data. Our key contribution is a Mixup-based contrastive loss that 
+            learns robust representations by aligning mixed samples from one modality with their 
+            corresponding samples from other modalities thereby capturing shared relations between 
+            them. For multimodal classification tasks, we introduce a framework that integrates a 
+            fusion module with unimodal prediction modules for auxiliary supervision during training, 
+            complemented by our proposed Mixup-based contrastive loss. Through extensive experiments 
+            on diverse datasets (N24News, ROSMAP, BRCA, and Food-101), we demonstrate that M3CoL 
+            effectively captures shared multimodal relations and generalizes across domains. It 
+            outperforms state-of-the-art methods on N24News, ROSMAP, and BRCA, while achieving 
+            comparable performance on Food-101. Our work highlights the significance of learning 
+            shared relations for robust multimodal learning, opening up promising avenues for 
+            future research.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">M3CoL Captures Shared Relations</h2>
+    <figure class = "image">
+    <img src="static/images/m3col-github.jpg" alt="M3CoL captures shared relations">
+      <figcaption class="has-text-justified mt-4">
+        Comparison of traditional contrastive and our proposed M3Co loss. 
+        <strong>M<sup>(1)</sup><sub>i</sub></strong> and <strong>M<sup>(2)</sup><sub>i</sub></strong> 
+        denote representations of the <em>i</em>-th  sample from modalities 1 and 2, respectively. Traditional 
+        contrastive loss (left panel) aligns corresponding sample representations across modalities. 
+        M3Co (right panel) mixes the <em>i</em>-th and <em>j</em>-th samples from modality 1 and enforces the 
+        representations of this mixture to align with the representations of the corresponding 
+        <em>i</em>-th and <em>j</em>-th samples from modality 2, and vice versa. For the text modality, we mix the 
+        text embeddings, while we mix the raw inputs for other modalities. Similarity (Sim) 
+        represents type of alignment enforced between the embeddings for all modalities.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Pipeline for Multimodal Classification</h2>
+    <figure class = "image">
+    <img src="static/images/m3col-page-arch.jpg" alt="M3CoL pipeline">
+      <figcaption class="has-text-justified mt-4">
+        Architecture of our proposed M3CoL model. Samples from modality 1 
+        (<span>x<sub>i</sub><sup>(1)</sup></span>, <span>x<sub>j</sub><sup>(1)</sup></span>) and 
+        modality 2 (<span>x<sub>i</sub><sup>(2)</sup></span>, 
+        <span>x<sub>k</sub><sup>(2)</sup></span>), along with their respective mixed data 
+        <span>x̃<sub>i,j</sub><sup>(1)</sup></span> and <span>x̃<sub>i,k</sub><sup>(2)</sup></span>, 
+        are fed into encoders <span>f<sup>(1)</sup></span> and <span>f<sup>(2)</sup></span> to 
+        generate embeddings. Unimodal embeddings <span>p<sub>i</sub><sup>(1)</sup></span> and 
+        <span>p<sub>i</sub><sup>(2)</sup></span> are processed through classifier 1 and 2 to 
+        produce predictions <span>ŷ<sub>i</sub><sup>(1)</sup></span> and 
+        <span>ŷ<sub>i</sub><sup>(2)</sup></span> for training supervision only. The unimodal 
+        embeddings <span>p<sub>i</sub><sup>(1)</sup></span> and 
+        <span>p<sub>i</sub><sup>(2)</sup></span> are concatenated and processed through classifier 3 
+        to yield <span>ŷ<sub>final</sub></span>, utilized during training and inference. 
+        Additionally, unimodal embeddings <span>p<sub>i</sub><sup>(1)</sup></span>, 
+        <span>p<sub>j</sub><sup>(1)</sup></span>, <span>p<sub>i</sub><sup>(2)</sup></span>, 
+        <span>p<sub>k</sub><sup>(2)</sup></span>, and mixed embeddings 
+        <span>p̃<sub>i,j</sub><sup>(1)</sup></span> and <span>p̃<sub>i,k</sub><sup>(2)</sup></span> 
+        are utilized by our contrastive loss <span>L<sub>M3Co</sub></span> for shared alignment.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+
+<section class="section hero-is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Comparisons with Baselines</h2>
+
+    <!-- Carousel wrapper -->
+    <div id="fedex-lora-carousel" class="carousel results-carousel">
+      <!-- Carousel item 1 -->
+      <div class="item">
+        <div class="carousel-content">
+          <img src="static/images/m3col-tab-1.jpg" alt="RoBERTa-base on GLUE">
+          <h2 class="subtitle has-text-centered main-caption">
+            N24News
+          </h2>
+        </div>
+      </div>
+
+      <!-- Carousel item 2 -->
+      <div class="item">
+        <div class="carousel-content">
+          <img src="static/images/m3col-tab-2.jpg" alt="RoBERTa-large on GLUE">
+          <h2 class="subtitle has-text-centered main-caption">
+            ROSMAP and BRCA
+          </h2>
+        </div>
+      </div>
+
+      <!-- Carousel item 3 -->
+      <div class="item">
+        <div class="carousel-content">
+          <img src="static/images/m3col-tab-3.jpg" alt="GPT-2 on E2E-NLG">
+          <h2 class="subtitle has-text-centered main-caption">
+            Food-101
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Caption description below -->
+    <div class="content has-text-justified mt-4">
+      <p>
+        Comparison of M3CoL against various baselines on N24News, ROSMAP, BRCA, and Food-101 datasets.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Visualization of Attention Heatmaps</h2>
+
+    <!-- Carousel wrapper -->
+    <div id="fedex-lora-carousel" class="carousel results-carousel">
+      <!-- Carousel item 1 -->
+      <div class="item" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <img src="static/images/m3col-att-1.jpg" alt="RoBERTa-base on GLUE" style="width: 100%; max-width: 600px; height: auto; margin-bottom: 10px;">
+        <h2 class="subtitle has-text-centered main-caption", style="text-align: left;">
+        </h2>
+      </div>
+
+      <!-- Carousel item 2 -->
+      <div class="item" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <img src="static/images/m3col-att-2.jpg" alt="RoBERTa-large on GLUE" style="width: 100%; max-width: 600px; height: auto; margin-bottom: 10px;">
+        <h2 class="subtitle has-text-centered main-caption" style="text-align: left;">
+        </h2>
+      </div>
+      </div>
+
+    <!-- Caption description below -->
+    <div class="content has-text-justified mt-4">
+      <p>
+      Text-guided visual grounding with varying input prompts.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+       Paper video. -->
+      <!-- <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video"> --> 
+            <!-- Youtube embed code here -->
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+             Your video file here -->
+            <!-- <source src="static/videos/carousel2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\ --> -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{kumar2024harnessingsharedrelationsmultimodal,
+        title={Harnessing Shared Relations via Multimodal Mixup Contrastive Learning for Multimodal Classification}, 
+        author={Raja Kumar and Raghav Singhal and Pranamya Kulkarni and Deval Mehta and Kshitij Jadhav},
+        year={2024},
+        eprint={2409.17777},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2409.17777}, 
+  }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- Default Statcounter code for M3CoL Project Page
+https://raghavsinghal10.github.io/m3col_page/ -->
+<script type="text/javascript">
+  var sc_project=13047753; 
+  var sc_invisible=1; 
+  var sc_security="4c62f30c"; 
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="Web Analytics
+  Made Easy - Statcounter" href="https://statcounter.com/"
+  target="_blank"><img class="statcounter"
+  src="https://c.statcounter.com/13047753/0/4c62f30c/1/"
+  alt="Web Analytics Made Easy - Statcounter"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code -->
+  <!-- End of Statcounter Code -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
