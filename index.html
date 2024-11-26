@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Initialization using Update Approximation is a Silver Bullet for Extremely Efficient Low-Rank Fine-Tuning</h1>
+            <h1 class="title is-1 publication-title">Initialization using Update Approximation is a <em>Silver Bullet</em> for Extremely Efficient Low-Rank Fine-Tuning</h1>
             <div class="is-size-4 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -179,6 +179,32 @@
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Contributions</h2>
+    <div class="content has-text-justified">
+      <ul>
+        <li>
+          We theoretically formalize the limitations of LoRA-XS, showing how its constrained update space leads to suboptimal gradient approximation, initialization sensitivity, and hyperparameter dependence.
+        </li>
+ 
+        <li>
+          We propose a principled initialization strategy derived from approximating the first step of full fine-tuning, proving it provides optimal low-rank approximation of the initial gradient and preserves update directions throughout training.
+        </li>
+ 
+        <li>
+          We prove that our initialization makes gradient optimization hyperparameter-independent and guarantees convergence by maintaining orthonormal bases, eliminating the need for any tuning of the scaling factor.
+        </li>
+ 
+        <li>
+          Through extensive experiments on 4 models across 16 datasets covering mathematical reasoning, commonsense reasoning, and language understanding tasks, we demonstrate that our method surpasses the performance of LoRA while using <strong>27-90x</strong> less parameters, and comprehensively outperforms LoRA-XS.
+        </li>
+      </ul>
+    </div>
+  </div>
+ </section>
+
+
 <section class="section hero-is-light">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Comparisons with Baselines</h2>
@@ -238,30 +264,6 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3">Contributions</h2>
-    <div class="content has-text-justified">
-      <ul>
-        <li>
-          We theoretically formalize the limitations of LoRA-XS, showing how its constrained update space leads to suboptimal gradient approximation, initialization sensitivity, and hyperparameter dependence.
-        </li>
- 
-        <li>
-          We propose a principled initialization strategy derived from approximating the first step of full fine-tuning, proving it provides optimal low-rank approximation of the initial gradient and preserves update directions throughout training.
-        </li>
- 
-        <li>
-          We prove that our initialization makes gradient optimization hyperparameter-independent and guarantees convergence by maintaining orthonormal bases, eliminating the need for any tuning of the scaling factor.
-        </li>
- 
-        <li>
-          Through extensive experiments on 4 models across 16 datasets covering mathematical reasoning, commonsense reasoning, and language understanding tasks, we demonstrate that our method surpasses the performance of LoRA while using <strong>27-90x</strong> less parameters, and comprehensively outperforms LoRA-XS.
-        </li>
-      </ul>
-    </div>
-  </div>
- </section>
 
 
 
@@ -373,22 +375,23 @@
 
 <!-- Statcounter tracking code -->
   
-<!-- Default Statcounter code for M3CoL Project Page
-https://raghavsinghal10.github.io/m3col_page/ -->
+<!-- Default Statcounter code for LoRA SB Project Page
+https://raghavsinghal10.github.io/lora-sb-page/ -->
 <script type="text/javascript">
-  var sc_project=13047753; 
+  var sc_project=13064177; 
   var sc_invisible=1; 
-  var sc_security="4c62f30c"; 
+  var sc_security="71f6139d"; 
   </script>
   <script type="text/javascript"
   src="https://www.statcounter.com/counter/counter.js"
   async></script>
-  <noscript><div class="statcounter"><a title="Web Analytics
-  Made Easy - Statcounter" href="https://statcounter.com/"
-  target="_blank"><img class="statcounter"
-  src="https://c.statcounter.com/13047753/0/4c62f30c/1/"
-  alt="Web Analytics Made Easy - Statcounter"
+  <noscript><div class="statcounter"><a title="Web Analytics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/13064177/0/71f6139d/1/"
+  alt="Web Analytics"
   referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code -->
   <!-- End of Statcounter Code -->
   <!-- End of Statcounter Code -->
 
