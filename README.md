@@ -2,7 +2,7 @@
 This is an academic paper project page template.
 
 
-Example project pages built using this template are:
+Exaple project pages built using this template are:
 - https://vision.huji.ac.il/spectral_detuning/
 - https://vision.huji.ac.il/podd/
 - https://dreamix-video-editing.github.io
