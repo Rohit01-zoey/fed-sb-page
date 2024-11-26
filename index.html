@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Initialization using Update Approximation is a Silver Bullet for Extremely Efficient Low-Rank Fine-Tuning</title>
+  <title>LoRA-SB</title>
   <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -235,45 +235,33 @@
         </div>
       </div>
     </div>
-
-    <!-- Caption description below -->
-    <div class="content has-text-justified mt-4">
-      <p>
-        Performance Comparison on Various Tasks and Loss Curves
-      </p>
-    </div>
   </div>
 </section>
 
-<!-- <section class="section">
+<section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Visualization of Attention Heatmaps</h2> -->
-
-    <!-- Carousel wrapper -->
-    <!-- <div id="fedex-lora-carousel" class="carousel results-carousel"> -->
-      <!-- Carousel item 1 -->
-      <!-- <div class="item" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-        <img src="static/images/m3col-att-1.jpg" alt="RoBERTa-base on GLUE" style="width: 100%; max-width: 600px; height: auto; margin-bottom: 10px;">
-        <h2 class="subtitle has-text-centered main-caption", style="text-align: left;">
-        </h2>
-      </div> -->
-
-      <!-- Carousel item 2 -->
-      <!-- <div class="item" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-        <img src="static/images/m3col-att-2.jpg" alt="RoBERTa-large on GLUE" style="width: 100%; max-width: 600px; height: auto; margin-bottom: 10px;">
-        <h2 class="subtitle has-text-centered main-caption" style="text-align: left;">
-        </h2>
-      </div>
-      </div> -->
-
-    <!-- Caption description below -->
-    <!-- <div class="content has-text-justified mt-4">
-      <p>
-      Text-guided visual grounding with varying input prompts.
-      </p>
+    <h2 class="title is-3">Contributions</h2>
+    <div class="content has-text-justified">
+      <ul>
+        <li>
+          We theoretically formalize the limitations of LoRA-XS, showing how its constrained update space leads to suboptimal gradient approximation, initialization sensitivity, and hyperparameter dependence.
+        </li>
+ 
+        <li>
+          We propose a principled initialization strategy derived from approximating the first step of full fine-tuning, proving it provides optimal low-rank approximation of the initial gradient and preserves update directions throughout training.
+        </li>
+ 
+        <li>
+          We prove that our initialization makes gradient optimization hyperparameter-independent and guarantees convergence by maintaining orthonormal bases, eliminating the need for any tuning of the scaling factor.
+        </li>
+ 
+        <li>
+          Through extensive experiments on 4 models across 16 datasets covering mathematical reasoning, commonsense reasoning, and language understanding tasks, we demonstrate that our method surpasses the performance of LoRA while using <strong>27-90x</strong> less parameters, and comprehensively outperforms LoRA-XS.
+        </li>
+      </ul>
     </div>
   </div>
-</section> -->
+ </section>
 
 
 
