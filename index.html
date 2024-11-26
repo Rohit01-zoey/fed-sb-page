@@ -178,35 +178,6 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Pipeline for Multimodal Classification</h2>
-    <figure class = "image">
-    <img src="static/images/m3col-page-arch.jpg" alt="M3CoL pipeline">
-      <figcaption class="has-text-justified mt-4">
-        Architecture of our proposed M3CoL model. Samples from modality 1 
-        (<span>x<sub>i</sub><sup>(1)</sup></span>, <span>x<sub>j</sub><sup>(1)</sup></span>) and 
-        modality 2 (<span>x<sub>i</sub><sup>(2)</sup></span>, 
-        <span>x<sub>k</sub><sup>(2)</sup></span>), along with their respective mixed data 
-        <span>x̃<sub>i,j</sub><sup>(1)</sup></span> and <span>x̃<sub>i,k</sub><sup>(2)</sup></span>, 
-        are fed into encoders <span>f<sup>(1)</sup></span> and <span>f<sup>(2)</sup></span> to 
-        generate embeddings. Unimodal embeddings <span>p<sub>i</sub><sup>(1)</sup></span> and 
-        <span>p<sub>i</sub><sup>(2)</sup></span> are processed through classifier 1 and 2 to 
-        produce predictions <span>ŷ<sub>i</sub><sup>(1)</sup></span> and 
-        <span>ŷ<sub>i</sub><sup>(2)</sup></span> for training supervision only. The unimodal 
-        embeddings <span>p<sub>i</sub><sup>(1)</sup></span> and 
-        <span>p<sub>i</sub><sup>(2)</sup></span> are concatenated and processed through classifier 3 
-        to yield <span>ŷ<sub>final</sub></span>, utilized during training and inference. 
-        Additionally, unimodal embeddings <span>p<sub>i</sub><sup>(1)</sup></span>, 
-        <span>p<sub>j</sub><sup>(1)</sup></span>, <span>p<sub>i</sub><sup>(2)</sup></span>, 
-        <span>p<sub>k</sub><sup>(2)</sup></span>, and mixed embeddings 
-        <span>p̃<sub>i,j</sub><sup>(1)</sup></span> and <span>p̃<sub>i,k</sub><sup>(2)</sup></span> 
-        are utilized by our contrastive loss <span>L<sub>M3Co</sub></span> for shared alignment.
-      </figcaption>
-    </figure>
-  </div>
-</section>
-
 
 <section class="section hero-is-light">
   <div class="container is-max-desktop">
@@ -245,10 +216,30 @@
       </div>
     </div>
 
+    <div class="item">
+      <div class="carousel-content">
+        <img src="static/images/loss-mistral-96" alt="GPT-2 on E2E-NLG">
+        <h2 class="subtitle has-text-centered main-caption">
+          Arithmetic Reasoning: Mistral-7B
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="carousel-content">
+      <img src="static/images/loss-gemma-96" alt="GPT-2 on E2E-NLG">
+      <h2 class="subtitle has-text-centered main-caption">
+        Arithmetic Reasoning: Gemma-2 9B
+      </h2>
+    </div>
+  </div>
+</div>
+
     <!-- Caption description below -->
     <div class="content has-text-justified mt-4">
       <p>
-        Performance Comparison on Various Tasks
+        Performance Comparison on Various Tasks and Loss Curves
       </p>
     </div>
   </div>
