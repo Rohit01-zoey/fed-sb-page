@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>M3CoL: Harnessing Shared Relations via Multimodal Mixup Contrastive Learning for Multimodal Classification</title>
+  <title>Initialization using Update Approximation is a Silver Bullet for Extremely Efficient Low-Rank Fine-Tuning</title>
   <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,8 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Initialization using Update Approximation is a Silver Bullet for
-              Extremely Efficient Low-Rank Fine-Tuning</h1>
+            <h1 class="title is-1 publication-title">Initialization using Update Approximation is a Silver Bullet for Extremely Efficient Low-Rank Fine-Tuning</h1>
             <div class="is-size-4 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -67,7 +66,7 @@
                 <span class="author-block">      
                 <span target="_blank">Samuel Horvath<sup>1</sup>,</span>
                 <span class="author-block">
-                <span target="_blank">Praneeth Vepakomma<sup>1,3</sup>,</span>
+                <span target="_blank">Praneeth Vepakomma<sup>1,3</sup></span>
                 <span class="author-block">
                 </div>
 
@@ -169,19 +168,12 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">M3CoL Captures Shared Relations</h2>
+    <h2 class="title is-3 has-text-centered">LoRA-SB Illustration</h2>
     <figure class = "image">
-    <img src="static/images/m3col-github.jpg" alt="M3CoL captures shared relations">
+    <img src="static/images/LoRA-SB-intro.png" alt="LoRA-SB Illustration">
       <figcaption class="has-text-justified mt-4">
-        Comparison of traditional contrastive and our proposed M3Co loss. 
-        <strong>M<sup>(1)</sup><sub>i</sub></strong> and <strong>M<sup>(2)</sup><sub>i</sub></strong> 
-        denote representations of the <em>i</em>-th  sample from modalities 1 and 2, respectively. Traditional 
-        contrastive loss (left panel) aligns corresponding sample representations across modalities. 
-        M3Co (right panel) mixes the <em>i</em>-th and <em>j</em>-th samples from modality 1 and enforces the 
-        representations of this mixture to align with the representations of the corresponding 
-        <em>i</em>-th and <em>j</em>-th samples from modality 2, and vice versa. For the text modality, we mix the 
-        text embeddings, while we mix the raw inputs for other modalities. Similarity (Sim) 
-        represents type of alignment enforced between the embeddings for all modalities.
+        LoRA-XS reduces parameter count compared to LoRA by inserting a trainable <em>r × r</em> matrix <em>R</em> between <em>B</em> and <em>A</em>, while keeping other matrices fixed, leading to <em>W = W₀ + sBRA</em>. Our method, LoRA-SB, leverages the same architecture. We find that updating <em>R</em> using its gradients <em>g^R</em> is equivalent to updating the full-finetuning matrix <em>W</em> with an equivalent gradient <em>g̃ₛв = sBg^RA</em>. We initialize <em>B</em>, <em>R</em>, and <em>A</em> such that the equivalent gradient <em>g̃ₛв</em> optimally approximates the full fine-tuning gradient <em>g</em> in low rank subspaces <strong>at each training step</strong>.
+        In essence, we simulate the <strong>entire full fine-tuning process</strong> optimally within low-rank subspaces by <strong>utilizing only the initial gradient <em>g₁</em></strong> (shown in green) from full fine-tuning.
       </figcaption>
     </figure>
   </div>
