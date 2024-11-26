@@ -57,27 +57,25 @@
             <div class="is-size-4 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <span target="_blank">Raja Kumar<sup>*</sup><sup>1</sup>,</span>
+                <span target="_blank">Kaustubh Ponkshe<sup>*</sup><sup>1</sup>,</span>
                 <span class="author-block">
                 <span  target="_blank">Raghav Singhal<sup>*</sup><sup>1</sup>,</span>
                 <span class="author-block">
-                <span target="_blank">Pranamya Kulkarni<sup>1</sup>,</span>
+                <span target="_blank">Eduard Gorbunov<sup>1</sup>,</span>
                 <span class="author-block">
-                <span target="_blank">Deval Mehta<sup>2</sup>,</span>
+                <span target="_blank">Alexey Tumanov<sup>2</sup>,</span>
                 <span class="author-block">      
-                <span target="_blank">Kshitij Jadhav<sup>1</sup>,</span>
+                <span target="_blank">Samuel Horvath<sup>1</sup>,</span>
+                <span class="author-block">
+                <span target="_blank">Praneeth Vepakomma<sup>1,3</sup>,</span>
                 <span class="author-block">
                 </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1 </sup>Indian Institute of Technology Bombay, India
-                    <br><sup>2 </sup>AIM for Health Lab, Department of Data Science & AI, Monash University, Australia</span>
+                    <span class="author-block"><sup>1 </sup>Mohamed bin Zayed University of Artificial Intelligence, UAE</span>
+                    <br><sup>2 </sup>Georgia Institute of Technology, USA</span>
+                    <br><sup>3 </sup>Massachusetts Institute of Technology, USA</span>
                     <span class="eql-cntrb"><small><br><sup>* </sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="is-size-4 publication-authors">
-                    <span class="author-block" style="color: red;">A version of our paper is accepted at NeurIPS 2024 Workshop on Unifying Representations in Neural Models (UniReps)</span>
-                    </span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -107,7 +105,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/RaghavSinghal10/M3CoL" target="_blank"
+                    <a href="https://github.com/RaghavSinghal10/lora-sb" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -118,7 +116,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2409.17777" target="_blank"
+                  <a href="" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -160,22 +158,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Deep multimodal learning has shown remarkable success by leveraging contrastive learning 
-            to capture explicit one-to-one relations across modalities. However, realworld data often 
-            exhibits <em>shared</em> relations beyond simple pairwise associations. We propose <strong>M3CoL</strong>, a 
-            <strong>M</strong>ultimodal <strong>M</strong>ixup <strong>C</strong>ontrastive <strong>L</strong>earning approach to capture nuanced shared relations 
-            inherent in multimodal data. Our key contribution is a Mixup-based contrastive loss that 
-            learns robust representations by aligning mixed samples from one modality with their 
-            corresponding samples from other modalities thereby capturing shared relations between 
-            them. For multimodal classification tasks, we introduce a framework that integrates a 
-            fusion module with unimodal prediction modules for auxiliary supervision during training, 
-            complemented by our proposed Mixup-based contrastive loss. Through extensive experiments 
-            on diverse datasets (N24News, ROSMAP, BRCA, and Food-101), we demonstrate that M3CoL 
-            effectively captures shared multimodal relations and generalizes across domains. It 
-            outperforms state-of-the-art methods on N24News, ROSMAP, and BRCA, while achieving 
-            comparable performance on Food-101. Our work highlights the significance of learning 
-            shared relations for robust multimodal learning, opening up promising avenues for 
-            future research.
+            Low-rank adapters have become a standard approach for efficiently fine-tuning large language models (LLMs), but they often fall short of achieving the performance of full fine-tuning. We propose a method, <strong>LoRA</strong> <strong>S</strong>ilver <strong>B</strong>ullet or <strong>LoRA-SB</strong>, that approximates full fine-tuning within low-rank subspaces using a carefully designed initialization strategy. We theoretically demonstrate that the architecture of LoRA-XS—which inserts a trainable <em>r × r</em> matrix between <em>B</em> and <em>A</em> while keeping other matrices fixed—provides the precise conditions needed for this approximation. We leverage its constrained update space to achieve optimal scaling for high-rank gradient updates while removing the need for hyperparameter tuning. We prove that our initialization offers an optimal low-rank approximation of the initial gradient and preserves update directions throughout training. Extensive experiments across mathematical reasoning, commonsense reasoning, and language understanding tasks demonstrate that our approach exceeds the performance of standard LoRA while using <strong>27-90x</strong> fewer parameters, and comprehensively outperforms LoRA-XS. Our findings establish that it is possible to simulate full fine-tuning in low-rank subspaces, and achieve significant efficiency gains without sacrificing performance.
           </p>
         </div>
       </div>
