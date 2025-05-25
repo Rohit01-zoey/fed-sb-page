@@ -180,19 +180,19 @@
     <div class="content has-text-justified">
       <ul>
         <li>
-          We theoretically formalize the limitations of LoRA-XS, showing how its constrained update space leads to suboptimal gradient approximation, initialization sensitivity, and hyperparameter dependence.
+          We propose ABBA, a novel PEFT architecture that models the weight update as the Hadamard product of two independently learnable low-rank matrices. This formulation enables highly expressive, high-rank updates while preserving strict parameter efficiency.
         </li>
  
         <li>
-          We propose a principled initialization strategy derived from approximating the first step of full fine-tuning, proving it provides optimal low-rank approximation of the initial gradient and preserves update directions throughout training.
+          We provide theoretical and empirical analyses of ABBA's expressivity, showing that Hadamard-based decomposition consistently outperforms standard low-rank methods in matrix reconstruction.
         </li>
  
         <li>
-          We prove that our initialization makes gradient optimization hyperparameter-independent and guarantees convergence by maintaining orthonormal bases, eliminating the need for any tuning of the scaling factor.
+          We introduce an exact and efficient reformulation of ABBA using Khatri–Rao factorization, enabling scalable and practical implementation without compromising expressivity.
         </li>
- 
+
         <li>
-          Through extensive experiments on 4 models across 16 datasets covering mathematical reasoning, commonsense reasoning, and language understanding tasks, we demonstrate that our method surpasses the performance of LoRA while using <strong>27-90x</strong> less parameters, and comprehensively outperforms LoRA-XS.
+          Through extensive experiments on four models across arithmetic and commonsense reasoning tasks, we demonstrate that ABBA achieves state-of-the-art performance, significantly outperforming existing PEFT methods under equal or lower parameter budgets.
         </li>
       </ul>
     </div>
