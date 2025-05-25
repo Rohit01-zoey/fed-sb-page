@@ -163,9 +163,9 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">LoRA-SB Illustration</h2>
+    <h2 class="title is-3 has-text-centered">ABBA Illustration</h2>
     <figure class = "image">
-    <img src="static/images/LoRA-SB-intro.png" alt="LoRA-SB Illustration">
+    <img src="static/images/abba_new.png" alt="ABBA Illustration">
       <figcaption class="has-text-justified mt-4">
         LoRA-XS reduces parameter count compared to LoRA by inserting a trainable <em>r × r</em> matrix <em>R</em> between <em>B</em> and <em>A</em>, while keeping other matrices fixed, leading to <em>W = W<sub>0</sub> + sBRA</em>. Our method, LoRA-SB, leverages the same architecture. We find that updating <em>R</em> using its gradients <em>g<sup>R</sup></em> is equivalent to updating the full-finetuning matrix <em>W</em> with an equivalent gradient <em>g<sub>SB</sub> = sBg<sup>R</sup>A</em>. We initialize <em>B</em>, <em>R</em>, and <em>A</em> such that the equivalent gradient <em>g<sub>SB</sub></em> optimally approximates the full fine-tuning gradient <em>g</em> in low rank subspaces <strong>at each training step</strong>. In essence, we simulate the <strong>entire full fine-tuning process</strong> optimally within low-rank subspaces by <strong>utilizing only the initial gradient <em>g<sub>1</sub></em></strong> (shown in green) from full fine-tuning.
       </figcaption>
