@@ -174,7 +174,7 @@
         where \( B_1 \in \mathbb{R}^{m \times r_1} \), \( A_1 \in \mathbb{R}^{r_1 \times n} \), 
         \( B_2 \in \mathbb{R}^{m \times r_2} \), and \( A_2 \in \mathbb{R}^{r_2 \times n} \), 
         with \( r_1, r_2 \ll \min(m, n) \). The scaling factor \( s \) ensures training stability.
-        This parameterization introduces only \( (r_1 + r_2)(m + n) \) trainable parameters—substantially fewer than full fine-tuning—while enabling an effective rank up to \( r_1 r_2 \). 
+        This parameterization introduces only \( (r_1 + r_2)(m + n) \) trainable parameters - substantially fewer than full fine-tuning—while enabling an effective rank up to \( r_1 r_2 \). 
         To maximize expressivity under a fixed parameter budget, we typically set \( r_1 = r_2 \). 
         For fair comparison with other PEFT methods, we match parameter counts by setting \( r_1 = r_2 = r/2 \), so that ABBA uses the same number of parameters as standard LoRA-based approaches.
       </figcaption>
