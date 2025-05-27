@@ -213,17 +213,54 @@
 
  <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centred">Method</h2>
+    <h2 class="title is-3 has-text-centered">Efficiency of ABBA</h2>
     <div class="content has-text-justified">
       <p>
-        Please refer to our paper for a detailed explanation of our method and the associated proofs. We provide a pseudo-code of our algorithm below.
+        While ABBA is clearly parameter-efficient, analyzing its memory footprint during training is more subtle. 
+        In LoRA, the update \( \Delta W = BA \) is applied as \( \Delta W x = B (A x) \), allowing intermediate computations to remain low-rank. 
+        Only the activation \( A x \in \mathbb{R}^r \) and the adapter weights need to be stored additionally, avoiding the materialization of the full \( m \times n \) matrix \( BA \).
+      </p>
+      <p>
+        In contrast, ABBA’s update \( \Delta W = (B_1 A_1) \odot (B_2 A_2) \) poses a challenge. 
+        A naive implementation would require constructing both \( B_1 A_1 \) and \( B_2 A_2 \), followed by their elementwise product, resulting in the storage of multiple full \( m \times n \) matrices. 
+        Moreover, unlike LoRA, the Hadamard product does not distribute over matrix–vector multiplication, so computing \( B_2 (A_2 x) \) does not help incorporate the other matrices.
       </p>
     </div>
-    <div class="content has-text-centered">
-      <img src="static/images/sb-algo.png" alt="LoRA-SB Algorithm">
+
+    <div class="box" style="background-color: #e0f7fa;">
+      <strong>Theorem (Khatri–Rao Factorization&nbsp;<a href="#ref-slyusar1997new">[Slyusar, 1997]</a>):</strong><br/>
+      Let \( B_1 A_1, B_2 A_2 \in \mathbb{R}^{m \times n} \). Then,
+      \[
+      (B_1 A_1) \odot (B_2 A_2) = 
+      \underbrace{(B_1 \odot_r B_2)}_{m \times r_1 r_2}
+      \underbrace{(A_1^\top \odot_r A_2^\top)^\top}_{r_1 r_2 \times n}
+      \]
+      where \( \odot_r \) denotes the row-wise Khatri–Rao product.
+    </div>
+
+    <div class="content has-text-justified">
+      <p style="font-size: 0.9em;">
+        <strong>Definition (Row-wise Khatri–Rao Product):</strong> 
+        Given \( U, V \in \mathbb{R}^{m \times n} \), the row-wise Khatri–Rao product \( U \odot_r V \in \mathbb{R}^{m \times n^2} \) is defined as
+        \[
+        [U \odot_r V]_i := \left[ U_{i1} V_i,\, U_{i2} V_i,\, \dots,\, U_{in} V_i \right],
+        \]
+        where \( V_i \) is the \( i \)-th row of \( V \).
+      </p>
+
+      <p>
+        To address the memory bottleneck, we use the above theorem to rewrite ABBA in a LoRA-like form: define 
+        \( B_{\text{kr}} = B_1 \odot_r B_2 \) and \( A_{\text{kr}} = (A_1^\top \odot_r A_2^\top)^\top \). 
+        The update becomes \( \Delta W x = B_{\text{kr}} (A_{\text{kr}} x) \), avoiding any full-rank matrix construction.
+      </p>
+      <p>
+        This formulation allows ABBA to match LoRA’s compute and memory efficiency while offering significantly higher expressivity, 
+        as further analyzed in Section <code>ref{subsec:memory}</code>.
+      </p>
     </div>
   </div>
- </section>
+</section>
+
 
 
 <section class="section hero-is-light">
