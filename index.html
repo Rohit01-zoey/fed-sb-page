@@ -238,24 +238,13 @@
       where \( \odot_r \) denotes the row-wise Khatri–Rao product.
     </div>
 
-    <div class="content has-text-justified">
-      <p style="font-size: 0.9em;">
-        <strong>Definition (Row-wise Khatri–Rao Product):</strong> 
-        Given \( U, V \in \mathbb{R}^{m \times n} \), the row-wise Khatri–Rao product \( U \odot_r V \in \mathbb{R}^{m \times n^2} \) is defined as
-        \[
-        [U \odot_r V]_i := \left[ U_{i1} V_i,\, U_{i2} V_i,\, \dots,\, U_{in} V_i \right],
-        \]
-        where \( V_i \) is the \( i \)-th row of \( V \).
-      </p>
-
       <p>
         To address the memory bottleneck, we use the above theorem to rewrite ABBA in a LoRA-like form: define 
         \( B_{\text{kr}} = B_1 \odot_r B_2 \) and \( A_{\text{kr}} = (A_1^\top \odot_r A_2^\top)^\top \). 
         The update becomes \( \Delta W x = B_{\text{kr}} (A_{\text{kr}} x) \), avoiding any full-rank matrix construction.
       </p>
       <p>
-        This formulation allows ABBA to match LoRA’s compute and memory efficiency while offering significantly higher expressivity, 
-        as further analyzed in Section <code>ref{subsec:memory}</code>.
+        This formulation allows ABBA to match LoRA’s compute and memory efficiency while offering significantly higher expressivity.
       </p>
     </div>
   </div>
