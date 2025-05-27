@@ -219,6 +219,11 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Main Results</h2>
 
+    <!-- Add MathJax script for math rendering -->
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
     <!-- Carousel wrapper -->
     <div id="fedex-lora-carousel" class="carousel results-carousel">
       <!-- Carousel item 1 -->
@@ -263,8 +268,8 @@
 
       <!-- Carousel item 5 -->
       <div class="item">
-        <div class="carousel-content">
-          <img src="static/images/abba_diff_ranks.png" alt="loss-gemma">
+        <div class="carousel-content" style="text-align: center;">
+          <img src="static/images/abba_diff_ranks.png" alt="diff-ranks" style="display: inline-block;">
           <h2 class="subtitle has-text-centered main-caption">
             Different \( \{r_1, r_2\} \) pairs with fixed \( r_1 + r_2 = 32 \).
           </h2>
