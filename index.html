@@ -184,20 +184,46 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">ABBA Illustration</h2>
+    <h2 class="title is-3 has-text-centered">Fed-SB Illustration</h2>
     <figure class="image">
-      <img src="static/images/abba_new.png" alt="ABBA Illustration">
+      <img src="static/images/method_updated.png" alt="ABBA Illustration">
       <figcaption class="has-text-justified mt-4">
-        ABBA introduces a highly expressive yet efficient reparameterization for fine-tuning LLMs by modeling the update as the Hadamard product of two independently learnable low-rank matrices:
-        \[
-        \Delta W = s(B_1 A_1) \odot (B_2 A_2)
-        \]
-        where \( B_1 \in \mathbb{R}^{m \times r_1} \), \( A_1 \in \mathbb{R}^{r_1 \times n} \), 
-        \( B_2 \in \mathbb{R}^{m \times r_2} \), and \( A_2 \in \mathbb{R}^{r_2 \times n} \), 
-        with \( r_1, r_2 \ll \min(m, n) \). The scaling factor \( s \) ensures training stability.
-        This parameterization introduces only \( (r_1 + r_2)(m + n) \) trainable parameters-substantially fewer than full fine-tuning-while enabling an effective rank up to \( r_1 r_2 \). 
-        To maximize expressivity under a fixed parameter budget, we typically set \( r_1 = r_2 \). 
-        For fair comparison with other PEFT methods, we match parameter counts by setting \( r_1 = r_2 = r/2 \), so that ABBA uses the same number of parameters as standard LoRA-based approaches.
+        <p>
+          We propose <strong>Fed-SB</strong>, an extremely communication-efficient and high-performing federated adaptation of LoRA-SB. 
+          Instead of reparameterizing updates as a low-rank decomposition with learnable adapters, the server distributes frozen adapters 
+          <span class="math">\( \mathbf{B} \)</span> and <span class="math">\( \mathbf{A} \)</span>, while clients train only a small matrix 
+          <span class="math">\( \mathbf{R} \)</span> (Figure <span class="math"> \ref{fig:method} </span>). 
+          This enables exact aggregation, as the global update is simply the average of 
+          <span class="math">\( \mathbf{R} \)</span> across clients.
+        </p>
+  
+        <p>
+          Formally, given a pre-trained weight 
+          <span class="math">\( \mathbf{W}_0 \)</span> and data distributed across 
+          <span class="math">\( c \)</span> clients, each client learns updates of the form:
+        </p>
+  
+        <p class="has-text-centered">
+          <span class="math">
+            \[ \Delta \mathbf{W}_i = \mathbf{B} \mathbf{R}_i \mathbf{A}. \]
+          </span>
+        </p>
+  
+        <p>
+          The server then aggregates the updates by computing the global 
+          <span class="math">\( \mathbf{R} \)</span> matrix:
+        </p>
+  
+        <p class="has-text-centered">
+          <span class="math">
+            \[ \mathbf{R}^{\text{agg}} = \frac{1}{c} \sum_{i=1}^{c} \mathbf{R}_i, 
+               \quad \Delta \mathbf{W}^{\text{agg}} = \mathbf{B} \left(\frac{1}{c} \sum_{i=1}^{c} \mathbf{R}_i \right) \mathbf{A}. \]
+          </span>
+        </p>
+  
+        <p>
+          We show that <strong>Fed-SB</strong> effectively resolves all challenges in (private) federated FT while achieving state-of-the-art communication efficiency and performance.
+        </p>
       </figcaption>
     </figure>
   </div>
