@@ -212,24 +212,22 @@
     <div class="content has-text-justified">
       <ul>
         <li>
-          We propose ABBA, a novel PEFT architecture that models the weight update as the Hadamard product of two independently learnable low-rank matrices. This formulation enables highly expressive, high-rank updates while preserving strict parameter efficiency.
+          We propose <strong>Fed-SB</strong>, a federated fine-tuning method that achieves exact and optimal aggregation in low-rank adaptation without incurring prohibitive communication costs or performance degradation.
         </li>
- 
         <li>
-          We provide theoretical and empirical analyses of ABBA's expressivity, showing that Hadamard-based decomposition consistently outperforms standard low-rank methods in matrix reconstruction.
+          Fed-SB consistently achieves <strong>state-of-the-art</strong> results while significantly reducing communication cost, by up to <strong>230×</strong>, by requiring only an <span class="math">\( r \times r \)</span> matrix to be transmitted per aggregation.
         </li>
- 
         <li>
-          We introduce an exact and efficient reformulation of ABBA using Khatri–Rao factorization, enabling scalable and practical implementation without compromising expressivity.
+          We demonstrate that Fed-SB is particularly well-suited for privacy-preserving (federated) fine-tuning, as it minimizes noise by reducing the number of learnable parameters and leveraging linearity in the aggregate update.
         </li>
-
         <li>
-          Through extensive experiments on four models across arithmetic and commonsense reasoning tasks, we demonstrate that ABBA achieves state-of-the-art performance, significantly outperforming existing PEFT methods under equal or lower parameter budgets.
+          Extensive experiments on <span class="math">4</span> models across <span class="math">3</span> diverse benchmarks show that Fed-SB consistently outperforms existing methods while drastically reducing communication overhead in both private and non-private federated settings, establishing a new Pareto frontier in federated fine-tuning.
         </li>
       </ul>
     </div>
   </div>
- </section>
+</section>
+
 
 
  <section class="section">
