@@ -256,44 +256,24 @@
 
 
 
- <section class="section">
+<section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Efficiency of ABBA</h2>
+    <h2 class="title is-3 has-text-centered">Efficiency of Fed-SB</h2>
+
+    <div class="content has-text-centered mb-5">
+      <img src="static/images/fedsb_complexity.png" alt="Advantages of Fed-SB" style="max-width: 80%;">
+    </div>
+
     <div class="content has-text-justified">
       <p>
-        While ABBA is clearly parameter-efficient, analyzing its memory footprint during training is more subtle. 
-        In LoRA, the update \( \Delta W = BA \) is applied as \( \Delta W x = B (A x) \), allowing intermediate computations to remain low-rank. 
-        Only the activation \( A x \in \mathbb{R}^r \) and the adapter weights need to be stored additionally, avoiding the materialization of the full \( m \times n \) matrix \( BA \).
-      </p>
-      <p>
-        In contrast, ABBA’s update \( \Delta W = (B_1 A_1) \odot (B_2 A_2) \) poses a challenge. 
-        A naive implementation would require constructing both \( B_1 A_1 \) and \( B_2 A_2 \), followed by their elementwise product, resulting in the storage of multiple full \( m \times n \) matrices. 
-        Moreover, unlike LoRA, the Hadamard product does not distribute over matrix–vector multiplication, so computing \( B_2 (A_2 x) \) does not help incorporate the other matrices.
-      </p>
-    </div>
-
-    <div class="box" style="background-color: #e0f7fa;">
-      <strong>Theorem (Khatri–Rao Factorization&nbsp;<a href="#ref-slyusar1997new">[Slyusar, 1997]</a>):</strong><br/>
-      Let \( B_1 A_1, B_2 A_2 \in \mathbb{R}^{m \times n} \). Then,
-      \[
-      (B_1 A_1) \odot (B_2 A_2) = 
-      \underbrace{(B_1 \odot_r B_2)}_{m \times r_1 r_2}
-      \underbrace{(A_1^\top \odot_r A_2^\top)^\top}_{r_1 r_2 \times n}
-      \]
-      where \( \odot_r \) denotes the row-wise Khatri–Rao product.
-    </div>
-
-      <p>
-        To address the memory bottleneck, we use the above theorem to rewrite ABBA in a LoRA-like form: define 
-        \( B_{\text{kr}} = B_1 \odot_r B_2 \) and \( A_{\text{kr}} = (A_1^\top \odot_r A_2^\top)^\top \). 
-        The update becomes \( \Delta W x = B_{\text{kr}} (A_{\text{kr}} x) \), avoiding any full-rank matrix construction.
-      </p>
-      <p>
-        This formulation allows ABBA to match LoRA’s compute and memory efficiency while offering significantly higher expressivity.
+        We summarize the advantages of <strong>Fed-SB</strong> over various state-of-the-art federated fine-tuning methods involving <em>c</em> clients. Fed-SB achieves <strong>exact aggregation</strong> and <strong>high expressivity</strong> while maintaining an <strong>extremely low communication cost</strong>—one that remains <strong>constant with respect to the number of clients</strong>.
+        <br><br>
+        In privacy-preserving settings, Fed-SB provides further benefits by <strong>minimizing noise</strong>: it reduces the number of learnable parameters and leverages the <strong>linearity of its update formulation</strong> to avoid noise amplification—an issue that affects many other methods.
       </p>
     </div>
   </div>
 </section>
+
 
 
 
