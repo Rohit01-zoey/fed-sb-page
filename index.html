@@ -291,9 +291,9 @@
       <!-- Carousel item 1 -->
       <div class="item">
         <div class="carousel-content">
-          <img src="static/images/abba_cr.png" alt="table-math">
+          <img src="static/images/fedsb_cr_iid.png" alt="table-math">
           <h2 class="subtitle has-text-centered main-caption">
-            Commonsense Reasoning: Llama-3.2 1B and 3B
+            Federated fine-tuning of Llama-3.2 3B across eight commonsense reasoning datasets. # Comm. denotes the number of parameters communicated per round (in M). Best results are in <strong>bold</strong>.
           </h2>
         </div>
       </div>
@@ -301,9 +301,9 @@
       <!-- Carousel item 2 -->
       <div class="item">
         <div class="carousel-content">
-          <img src="static/images/abba_ar.png" alt="table-cr">
+          <img src="static/images/fedsb_cr_noniid.png" alt="table-cr">
           <h2 class="subtitle has-text-centered main-caption">
-            Arithmetic Reasoning: Mistral-7B and Gemma-2 9B
+            Federated fine‑tuning of Llama‑3.2 3B across eight commonsense reasoning datasets, in a <strong>highly data‑heterogeneous</strong> setting, where each client is trained on a distinct dataset. # Comm. denotes the number of parameters communicated per round (in M). Best results are in <strong>bold</strong>.
           </h2>
         </div>
       </div>
@@ -311,9 +311,9 @@
       <!-- Carousel item 3 -->
       <div class="item">
         <div class="carousel-content">
-          <img src="static/images/abba_init.png" alt="table-glue">
+          <img src="static/images/fedsb_table4.png" alt="table-glue">
           <h2 class="subtitle has-text-centered main-caption">
-            Different initialization strategies for ABBA (Mistral-7B)
+            Federated fine-tuning of Mistral-7B and Gemma-2 9B on GSM8K and MATH. # Comm. denotes the number of parameters communicated per round (in M). Best results are in <strong>bold</strong>.
           </h2>
         </div>
       </div>
@@ -321,9 +321,9 @@
       <!-- Carousel item 4 -->
       <div class="item">
         <div class="carousel-content">
-          <img src="static/images/abba_scaling.png" alt="loss-mistral">
+          <img src="static/images/fedsb_table5.png" alt="loss-mistral">
           <h2 class="subtitle has-text-centered main-caption">
-            Performance comparison across different scaling factor values \( s_{\text{ABBA}} \) for Llama-3.2 3B
+            Centralized (Cent.) private fine-tuning of BERT-base on SNLI for varying values of \( \epsilon \). A smaller \( \epsilon \) indicates a stricter privacy budget. # Params. denotes the number of trainable parameters (in K). Best results are in <strong>bold</strong>.
           </h2>
         </div>
       </div>
@@ -331,18 +331,9 @@
       <!-- Carousel item 5 -->
       <div class="item">
         <div class="carousel-content" style="text-align: center;">
-          <img src="static/images/abba_diff_ranks.png" alt="diff-ranks" style="display: inline-block;">
+          <img src="static/images/fedsb_table6.png" alt="diff-ranks" style="display: inline-block;">
           <h2 class="subtitle has-text-centered main-caption">
-            Different \( \{r_1, r_2\} \) pairs with fixed \( r_1 + r_2 = 32 \).
-          </h2>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="carousel-content" style="text-align: center;">
-          <img src="static/images/abba_memory.png" alt="diff-ranks" style="display: inline-block;">
-          <h2 class="subtitle has-text-centered main-caption">
-            Comparison of training memory requirements across various methods
+            Federated private fine-tuning of BERT-base on SNLI for varying values of \( \epsilon \). A smaller \( \epsilon \) indicates a stricter privacy budget. \# Comm. denotes the number of parameters communicated per round (in K). Best results are in <strong>bold</strong>.
           </h2>
         </div>
       </div>
