@@ -192,7 +192,7 @@
           We propose <strong>Fed-SB</strong>, an extremely communication-efficient and high-performing federated adaptation of LoRA-SB. 
           Instead of reparameterizing updates as a low-rank decomposition with learnable adapters, the server distributes frozen adapters 
           <span class="math">\( \mathbf{B} \)</span> and <span class="math">\( \mathbf{A} \)</span>, while clients train only a small matrix 
-          <span class="math">\( \mathbf{R} \)</span> (Figure <span class="math"> \ref{fig:method} </span>). 
+          <span class="math">\( \mathbf{R} \)</span>. 
           This enables exact aggregation, as the global update is simply the average of 
           <span class="math">\( \mathbf{R} \)</span> across clients.
         </p>
